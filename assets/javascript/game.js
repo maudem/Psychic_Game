@@ -1,5 +1,4 @@
 var game = {
- choices : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
  wins : 0,
  losses : 0,
  tries : 5
@@ -8,7 +7,7 @@ var game = {
 $(document).ready(function(){
 //The Computer guesses a random number from 0-9
 //Capture choices
- 	var compChoice = game.choices[Math.floor(Math.random()*game.choices.length)];
+ 	var compChoice =Math.floor(Math.random()*10);
  
 
 //
@@ -17,8 +16,6 @@ $(document).ready(function(){
 
 	//resets round 
 	var newRound = function() {
-		game.wins();
-		game.losses();
 		game.tries = 5;
 	}
 
